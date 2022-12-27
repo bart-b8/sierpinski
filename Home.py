@@ -14,12 +14,14 @@ def create_new_point(old_point, base_points):
 
 st.title("Sierpinski Triangle")
 
+number_of_points = st.sidebar.slider("Number of points:", max_value=5000)
+
 base_points = [(0,0), (1,0), (0.5, sqrt(3)/2)]
 points = []
 start = (0.5,0.5)
 points.append(start)
 old_point = start
-for i in range(10000):
+for i in range(number_of_points):
     new_point = tuple(create_new_point(old_point, base_points))
     points.append(new_point)
     old_point = new_point
