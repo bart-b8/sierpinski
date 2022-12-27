@@ -20,3 +20,11 @@ Source : [Wiki:Sierpinski](https://en.wikipedia.org/wiki/Sierpi%C5%84ski_triangl
 ## How this program selects a random point in the triangle.
 
 [todo]
+Points are represented by carthesian coordinates. Points inside the triangle comply to following constraints:
+$$
+\begin{case}
+x>=0\\
+y <= sqrt(3)x\\
+y <= -sqrt(3)(x-1)
+\end{cases}
+$$
