@@ -1,6 +1,6 @@
-# Sierpi´nski Triangle
+# Sierpiński Triangle
 
-Lets use python/streamlit to visualise the creation of a Sierpi´nski triangle using the chaos game.
+Lets use python/streamlit to visualise the creation of a Sierpiński triangle using the chaos game.
 
 ## The chaos game.
 
@@ -11,7 +11,7 @@ Lets use python/streamlit to visualise the creation of a Sierpi´nski triangle u
 5. Plot the current position.
 6. Repeat from step 3.
 
-Source : [Wiki:Sierpinski](https://en.wikipedia.org/wiki/Sierpi%C5%84ski_triangle)  
+Source : [Wiki:Sierpinski](https://en.wikipedia.org/wiki/Sierpi%C5%84ski_triangle#Chaos_game)  
 
 ## Start locations and possible results
 

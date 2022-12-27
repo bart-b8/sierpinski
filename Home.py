@@ -3,7 +3,7 @@ import matplotlib.pyplot as plt
 import numpy as np
 
 from math import sqrt
-from random import choice
+from random import choice, random
 
 def create_new_point(old_point, base_points):
     ref = choice(base_points)
@@ -12,13 +12,30 @@ def create_new_point(old_point, base_points):
     return new_point
 
 
-st.title("Sierpinski Triangle")
+st.title("Sierpiński Triangle")
 
-number_of_points = st.sidebar.slider("Number of points:", max_value=5000)
+with st.sidebar:
+    st.header("Info:")
+    st.write("Draws a number of points following the chaos game to construct the Sierpiński Triangle.")
+    st.markdown("""
+
+## The chaos game.
+
+1. Take three points in a plane to form a triangle
+2. Randomly select any point inside the triangle.
+3. Randomly select any of the three vertex points.
+4. Move half of the distance from your current position to the selecter vertex.
+5. Plot the current position.
+6. Repeat from step 3.
+
+Source : [Wikipedia: Sierpinski](https://en.wikipedia.org/wiki/Sierpi%C5%84ski_triangle#Chaos_game)  
+
+             """)
+number_of_points = st.sidebar.slider("Number of points:", min_value=2, max_value=5000)
 
 base_points = [(0,0), (1,0), (0.5, sqrt(3)/2)]
 points = []
-start = (0.5,0.5)
+start = (random(), random())
 points.append(start)
 old_point = start
 for i in range(number_of_points):
@@ -34,7 +51,8 @@ scaled_basepoints = [(scale*x, scale*y) for x,y in base_points]
 fig = plt.figure()
 x, y = zip(*base_points)
 plt.scatter(x,y)
-x,y = zip(*points)
+plt.scatter(start[0], start[1], s = 50, marker='.')
+x,y = zip(*points[1:])
 plt.scatter(x,y, s=1, marker='.')
 
 st.pyplot(fig)
