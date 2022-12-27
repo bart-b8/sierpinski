@@ -15,6 +15,8 @@ Source : [Wiki:Sierpinski](https://en.wikipedia.org/wiki/Sierpi%C5%84ski_triangl
 
 ## Start locations and possible results
 
-this section will go report on exerimenting with different startpoints and there influence on the game. 
+[todo]: this section will go report on exerimenting with different startpoints and there influence on the game. 
 
 ## How this program selects a random point in the triangle.
+
+[todo]
