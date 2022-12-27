@@ -12,3 +12,9 @@ Lets use python/streamlit to visualise the creation of a Sierpi´nski triangle u
 6. Repeat from step 3.
 
 Source : [Wiki:Sierpinski](https://en.wikipedia.org/wiki/Sierpi%C5%84ski_triangle)  
+
+## Start locations and possible results
+
+this section will go report on exerimenting with different startpoints and there influence on the game. 
+
+## How this program selects a random point in the triangle.
