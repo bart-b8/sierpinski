@@ -33,7 +33,7 @@ fig = plt.figure()
 x, y = zip(*base_points)
 plt.scatter(x,y)
 x,y = zip(*points)
-plt.scatter(x,y)
+plt.scatter(x,y, s=1, marker='.')
 
 st.pyplot(fig)
 
