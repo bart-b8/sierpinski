@@ -1,7 +1,7 @@
 import streamlit as st
 import matplotlib.pyplot as plt
-import numpy as np
 
+from chaos_game import base_points, start
 
 st.title("Sierpiński Triangle")
 
