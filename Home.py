@@ -1,7 +1,7 @@
 import streamlit as st
 import matplotlib.pyplot as plt
 
-from chaos_game import base_points, start
+from chaos_game import base_points, add_points
 
 st.title("Sierpiński Triangle")
 
@@ -23,17 +23,26 @@ Source : [Wikipedia: Sierpinski](https://en.wikipedia.org/wiki/Sierpi%C5%84ski_t
 
              """)
 
-number_of_points = st.sidebar.slider("Number of points:", min_value=2, max_value=5000)
+number_of_points = st.sidebar.slider("Number of points:", min_value=2, max_value=50)
 
 scale = 1000
-scaled_basepoints = [(scale*x, scale*y) for x,y in base_points]
+
+try:
+    points = add_points(number_of_points, points)
+except NameError:
+    points = add_points(number_of_points)
+
+# scaled_basepoints = [(scale*x, scale*y) for x,y in base_points]
 
 fig = plt.figure()
 x, y = zip(*base_points)
 plt.scatter(x,y)
-plt.scatter(start[0], start[1], s = 50, marker='.')
-x,y = zip(*points[1:])
-plt.scatter(x,y, s=1, marker='.')
+x, y = zip(*points)
+plt.scatter(x[0],y[0], s = 50, marker=".")
+plt.scatter(x[1:],y[1:], s=1, marker=".")
+# plt.scatter(start[0], start[1], s = 50, marker='.')
+# x,y = zip(*points[1:])
+# plt.scatter(x,y, s=1, marker='.')
 
 st.pyplot(fig)
 
