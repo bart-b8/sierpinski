@@ -31,9 +31,12 @@ y =< -sqrt(3)(x-1)
 
 ```math
 x>=0\\
-
+```
+```math
 y <= sqrt(3)x\\
+```
 
+```math
 y <= -sqrt(3)(x-1)
 ```
 
