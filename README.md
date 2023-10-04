@@ -35,4 +35,4 @@ $$
 
 When the web app hasn't been visited in a week, you'll have to press this button "Yes, get this app back up!"
 
-![./images/Zzzz-Streamlit.PNG]() 
+![](./images/Zzzz-Streamlit.PNG) 
