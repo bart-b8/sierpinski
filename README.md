@@ -21,7 +21,7 @@ Source : [Wiki:Sierpinski](https://en.wikipedia.org/wiki/Sierpi%C5%84ski_triangl
 
 [todo]
 Points are represented by Cartesian coordinates. Points inside the triangle comply to following constraints:
-```latex
+```math
 $$
 \begin{case}
 x>=0\\
