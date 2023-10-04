@@ -21,6 +21,7 @@ Source : [Wiki:Sierpinski](https://en.wikipedia.org/wiki/Sierpi%C5%84ski_triangl
 
 [todo]
 Points are represented by Cartesian coordinates. Points inside the triangle comply to following constraints:
+```latex
 $$
 \begin{case}
 x>=0\\
@@ -28,3 +29,10 @@ y <= sqrt(3)x\\
 y <= -sqrt(3)(x-1)
 \end{cases}
 $$
+```
+
+## Waking up the app
+
+When the web app hasn't been visited in a week, you'll have to press this button "Yes, get this app back up!"
+
+![./images/Zzzz-Streamlit.PNG]() 
