@@ -5,9 +5,10 @@ import numpy as np
 from math import sqrt
 from random import choice, random
 
+
 def create_new_point(old_point, base_points):
     ref = choice(base_points)
-    new_point = np.sum([old_point, ref], axis = 0)
+    new_point = np.sum([old_point, ref], axis=0)
     new_point = np.dot(0.5, new_point)
     return new_point
 
@@ -28,12 +29,12 @@ with st.sidebar:
 5. Plot the current position.
 6. Repeat from step 3.
 
-Source : [Wikipedia: Sierpinski](https://en.wikipedia.org/wiki/Sierpi%C5%84ski_triangle#Chaos_game)  
+Source : [Wikipedia: Sierpinski](https://en.wikipedia.org/wiki/Sierpi%C5%84ski_triangle#Chaos_game)
 
              """)
 number_of_points = st.sidebar.slider("Number of points:", min_value=2, max_value=5000)
 
-base_points = [(0,0), (1,0), (0.5, sqrt(3)/2)]
+base_points = [(0, 0), (1, 0), (0.5, sqrt(3)/2)]
 points = []
 start = (random(), random())
 points.append(start)
@@ -44,16 +45,14 @@ for i in range(number_of_points):
     old_point = new_point
 
 
-
 scale = 1000
-scaled_basepoints = [(scale*x, scale*y) for x,y in base_points]
+scaled_basepoints = [(scale*x, scale*y) for x, y in base_points]
 
 fig = plt.figure()
 x, y = zip(*base_points)
-plt.scatter(x,y)
-plt.scatter(start[0], start[1], s = 50, marker='.')
-x,y = zip(*points[1:])
-plt.scatter(x,y, s=1, marker='.')
+plt.scatter(x, y)
+plt.scatter(start[0], start[1], s=50, marker='.')
+x, y = zip(*points[1:])
+plt.scatter(x, y, s=1, marker='.')
 
 st.pyplot(fig)
-
